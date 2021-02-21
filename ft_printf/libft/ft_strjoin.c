@@ -6,13 +6,13 @@
 /*   By: flemos-d <flemos-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/08 12:02:23 by flemos-d          #+#    #+#             */
-/*   Updated: 2021/02/20 18:52:59 by flemos-d         ###   ########.fr       */
+/*   Updated: 2021/02/21 17:11:18 by flemos-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char *s1, char *s2)
 {
 	size_t	i;
 	size_t	j;
@@ -37,6 +37,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	while (s2[j] != '\0')
 		trade[i++] = s2[j++];
 	trade[i] = '\0';
-    free((char *)s1);
+	free(s1);
 	return (trade);
 }

@@ -6,7 +6,7 @@
 /*   By: flemos-d <flemos-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/23 15:47:09 by flemos-d          #+#    #+#             */
-/*   Updated: 2021/02/20 19:32:34 by flemos-d         ###   ########.fr       */
+/*   Updated: 2021/02/21 17:04:22 by flemos-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,12 +34,12 @@ typedef struct s_format
 	int		size;
 	char	flag;
 	int		precision;
-    int     precis_aux;
+	int     precis_aux;
 	bool	precision2;
 	char	twinkletoes;
 	int		zeroflag;
 	bool	free;
-    bool    minus;
+	bool    minus;
 }					t_format;
 
 int		ft_printf(const char *format, ...);
@@ -81,5 +81,9 @@ char    *ft_wsp(t_format *struct_, char *trade, char *temp);
 char    *ft_z_cut_func(t_format *struct_, char *trade, char *temp);
 
 char	*ft_pre_z(char *trade);
+
+void	ft_verify_p_it(t_format *struct_, char *trade);
+
+char	*ft_write_p_it(t_format *struct_, char *trade, char *temp);
 
 #endif

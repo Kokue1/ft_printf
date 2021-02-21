@@ -6,17 +6,17 @@
 /*   By: flemos-d <flemos-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/19 19:29:14 by flemos-d          #+#    #+#             */
-/*   Updated: 2021/02/21 02:04:33 by flemos-d         ###   ########.fr       */
+/*   Updated: 2021/02/21 17:16:53 by flemos-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/printf.h"
 
-static char *ft_write_w_m(t_format *struct_, char *trade)
+static char	*ft_write_w_m(t_format *struct_, char *trade)
 {
 	int		i;
 	int		j;
-	char    *temp;
+	char	*temp;
 
 	i = 0;
 	j = 0;
@@ -37,11 +37,11 @@ static char *ft_write_w_m(t_format *struct_, char *trade)
 	return (temp);
 }
 
-static char *ft_write_w(t_format *struct_, char *trade)
+static char	*ft_write_w(t_format *struct_, char *trade)
 {
 	int		i;
 	int		j;
-	char    *temp;
+	char	*temp;
 
 	i = 0;
 	j = 0;
@@ -65,7 +65,7 @@ static char *ft_write_w(t_format *struct_, char *trade)
 static char	*ft_write_zero(t_format *struct_, char *trade)
 {
 	char	*temp;
-	
+
 	if (struct_->zeroflag < 0 || struct_->zeroflag < (int)ft_strlen(trade))
 		return (trade);
 	temp = malloc(sizeof(char) * ((int)ft_strlen(trade) + struct_->zeroflag + 1));
@@ -74,7 +74,7 @@ static char	*ft_write_zero(t_format *struct_, char *trade)
 	if (struct_->zeroflag > struct_->precis_aux && struct_->precis_aux > -1)
 	{
 		temp = ft_wsp(struct_, trade, temp);
-		return(temp);
+		return (temp);
 	}
 	temp = ft_z_cut_func(struct_, trade, temp);
 	return (temp);
@@ -83,39 +83,23 @@ static char	*ft_write_zero(t_format *struct_, char *trade)
 static char	*ft_verify_p_id(t_format *struct_, char *trade)
 {
 	char	*temp;
-	int		i;
-	int		j;
+	int		len;
 
-	i = 0;
-	j = 0;
 	if (struct_->precision < 0 || struct_->precision < (int)ft_strlen(trade))
 		return (trade);
-	if (trade[0] == '-')
-		struct_->precision -= (int)(ft_strlen(trade) - 1);
-	else
-		struct_->precision -= (int)ft_strlen(trade);
-	temp = malloc(sizeof(char) * ((int)ft_strlen(trade) + struct_->precision + 1));
+	ft_verify_p_it(struct_, trade);
+	len = (int)ft_strlen(trade) + struct_->precision + 1;
+	temp = malloc(sizeof(char) * (len));
 	if (temp == NULL)
 		return (NULL);
-	if (trade[0] == '-')
-	{
-		temp[i++] = '-';
-		j++;
-	}
-	while (struct_->precision-- > 0)
-		temp[i++] = '0';
-	while (trade[j])
-		temp[i++] = trade[j++];
-	temp[i] = '\0';
-	struct_->precision = -1;
-	free(trade);
+	temp = ft_write_p_it(struct_, trade, temp);
 	return (temp);
 }
 
-void    ft_integer(t_format *struct_, va_list args)
+void	ft_integer(t_format *struct_, va_list args)
 {
-	char    *trade;
-	int     arg;
+	char	*trade;
+	int		arg;
 	int		len;
 
 	arg = va_arg(args, int);

@@ -6,7 +6,7 @@
 /*   By: flemos-d <flemos-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/01 05:59:36 by flemos-d          #+#    #+#             */
-/*   Updated: 2021/02/17 02:10:48 by flemos-d         ###   ########.fr       */
+/*   Updated: 2021/02/21 17:11:11 by flemos-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ int					ft_toupper(int c);
 
 char				*ft_substr(char const *s, unsigned int start, size_t len);
 
-char				*ft_strjoin(char const *s1, char const *s2);
+char				*ft_strjoin(char *s1, char *s2);
 
 char				*ft_strtrim(char const *s1, char const *set);
 

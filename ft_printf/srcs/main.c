@@ -791,16 +791,16 @@ int	main()
 	do_ft_printf = ft_printf("%-32p%-32p%-32p%-32p%-32p%-32p%-32p%-32p%-32p%-32p%-32p%-32p",&a01,&a02,&a03,&a04,&a05,&a06,&a07,&a08,&a09,&a10, &a11,&a12);
 	printf("\n");
 	printf("%d\n", do_printf);
-	printf("%d\n", do_ft_printf);*/
+	printf("%d\n", do_ft_printf);
     printf("\n");
 	do_printf = printf(" %p %p ", LONG_MIN, LONG_MAX);
 	printf("\n");
 	do_ft_printf = ft_printf(" %p %p ", LONG_MIN, LONG_MAX);
 	printf("\n");
 	printf("%d\n", do_printf);
-	printf("%d\n", do_ft_printf);
+	printf("%d\n", do_ft_printf);*/
     
-/*
+
 
 /////////////////////////////////////////////////
 //				D INTEGER TESTS

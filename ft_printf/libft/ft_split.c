@@ -6,7 +6,7 @@
 /*   By: flemos-d <flemos-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/04 01:33:52 by flemos-d          #+#    #+#             */
-/*   Updated: 2021/02/17 19:33:37 by flemos-d         ###   ########.fr       */
+/*   Updated: 2021/02/21 17:09:05 by flemos-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static size_t	get_length(const char *s, char c)
 {
-	int count;
+	int	count;
 
 	count = 0;
 	while (*s)
@@ -28,7 +28,7 @@ static size_t	get_length(const char *s, char c)
 	return (count);
 }
 
-char			**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char	**strs;
 	char	**sav_strs;

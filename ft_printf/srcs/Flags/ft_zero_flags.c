@@ -6,7 +6,7 @@
 /*   By: flemos-d <flemos-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/28 20:09:18 by flemos-d          #+#    #+#             */
-/*   Updated: 2021/02/21 02:04:15 by flemos-d         ###   ########.fr       */
+/*   Updated: 2021/02/21 17:13:49 by flemos-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,17 @@ static void	ft_star(t_format *struct_, va_list args)
 	struct_->zeroflag = va_arg(args, int);
 	if (struct_->zeroflag < 0)
 	{
-		struct_->wid *= (struct_->zeroflag * - 1);
+		struct_->wid *= (struct_->zeroflag * -1);
 		struct_->zeroflag = 0;
 	}
 }
 
-static bool	ft_verify_star(t_format *struct_)
+static bool	ft_verify_star(t_format *struct_, va_list args)
 {
 	if (ft_strchr(TWINKLETOES, struct_->format[struct_->count]))
 	{
 		struct_->twinkletoes = '*';
+		ft_star(struct_, args);
 		return (true);
 	}
 	return (false);
@@ -34,16 +35,13 @@ static bool	ft_verify_star(t_format *struct_)
 
 void	ft_zero_flag(t_format *struct_, va_list args)
 {
-	char    *temp;
+	char	*temp;
 	char	*temp2;
 	int		number;
 
 	struct_->flag = struct_->format[struct_->count++];
-	if (ft_verify_star(struct_))
-	{
-		ft_star(struct_, args);
+	if (ft_verify_star(struct_, args))
 		return ;
-	}	
 	if (struct_->format[struct_->count--] == '-')
 		return ;
 	temp = NULL;

@@ -6,7 +6,7 @@
 /*   By: flemos-d <flemos-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/28 17:48:04 by flemos-d          #+#    #+#             */
-/*   Updated: 2021/02/20 16:14:50 by flemos-d         ###   ########.fr       */
+/*   Updated: 2021/02/21 17:14:02 by flemos-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ void	initialize(t_format *struct_, const char *format)
 	struct_->flag = '\0';
 	struct_->precision = -1;
 	struct_->precision2 = true;
-    struct_->precis_aux = 0;
+	struct_->precis_aux = 0;
 	struct_->twinkletoes = ' ';
 	struct_->free = false;
 	struct_->zeroflag = 0;
-    struct_->minus = false;
+	struct_->minus = false;
 }
