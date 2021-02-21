@@ -6,7 +6,7 @@
 /*   By: flemos-d <flemos-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/23 15:19:24 by flemos-d          #+#    #+#             */
-/*   Updated: 2021/02/19 19:28:23 by flemos-d         ###   ########.fr       */
+/*   Updated: 2021/02/21 21:36:09 by flemos-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ void	ft_types(t_format *struct_, va_list args)
 	else if (struct_->format[struct_->count] == 'd'
 		|| struct_->format[struct_->count] == 'i')
 		ft_integer(struct_, args);
+	else if (struct_->format[struct_->count] == 'u')
+		ft_unsigned(struct_, args);
 }
 
 void	ft_verify(t_format *struct_, va_list args)

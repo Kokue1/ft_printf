@@ -4,7 +4,7 @@
 #define LONG_MAX  __LONG_MAX__
 
 
-int	main()
+/*int	main()
 {
 	int do_printf;
 	int do_ft_printf;
@@ -26,7 +26,7 @@ int	main()
 //  NO SPECIFIERS
 /////////////////////////////////
 
-	/*printf("\n");
+	printf("\n");
 	do_printf = printf("Texto Texto TEXTO \t TEeeeeeeeeeeeeeeeeeee  x      toooo");
 	printf("\n");
 	do_ft_printf = ft_printf("Texto Texto TEXTO \t TEeeeeeeeeeeeeeeeeeee  x      toooo");
@@ -1243,11 +1243,11 @@ int	main()
 	do_ft_printf = ft_printf("%0*d", -7, -54);
 	printf("\n");
 	printf("%d\n", do_printf);
-	printf("%d\n", do_ft_printf);*/
+	printf("%d\n", do_ft_printf);
 
-}
+}*/
 
-/*int	main()
+int	main()
 {
 	int do_printf;
 	int do_ft_printf;
@@ -1612,7 +1612,7 @@ int	main()
 	printf("\n");
 	printf("%d\n", do_printf);
 	printf("%d\n", do_ft_printf);
-}*/
+}
 
 /*int	main()
 {

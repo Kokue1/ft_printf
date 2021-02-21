@@ -6,7 +6,7 @@
 /*   By: flemos-d <flemos-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/23 15:47:09 by flemos-d          #+#    #+#             */
-/*   Updated: 2021/02/21 17:04:22 by flemos-d         ###   ########.fr       */
+/*   Updated: 2021/02/21 21:26:51 by flemos-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,5 +85,19 @@ char	*ft_pre_z(char *trade);
 void	ft_verify_p_it(t_format *struct_, char *trade);
 
 char	*ft_write_p_it(t_format *struct_, char *trade, char *temp);
+
+void	ft_unsigned(t_format *struct_, va_list args);
+
+char	*ft_write_p_it_ud(t_format *struct_, char *trade, char *temp);
+
+void	ft_verify_p_it_ud(t_format *struct_, char *trade);
+
+char	*ft_pre_z_ud(char *trade);
+
+char	*ft_z_cut_func_ud(t_format *struct_, char *trade, char *temp);
+
+char	*ft_wsp_ud(t_format *struct_, char *trade, char *temp);
+
+char	*ft_itoa_uns(long long arg);
 
 #endif

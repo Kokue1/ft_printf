@@ -6,7 +6,7 @@
 /*   By: flemos-d <flemos-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/01 05:59:36 by flemos-d          #+#    #+#             */
-/*   Updated: 2021/02/21 17:11:11 by flemos-d         ###   ########.fr       */
+/*   Updated: 2021/02/21 20:20:09 by flemos-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,16 @@ typedef struct s_list
 	void			*content;
 	struct s_list	*next;
 }					t_list;
+
+
+typedef struct s_split
+{
+	int				i;
+	int				j;
+	int				start;
+	char			**big_new;
+	char			*temp;
+}				t_split;
 
 int					ft_atoi(const char *str);
 
