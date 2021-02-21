@@ -1,0 +1,2 @@
+make re
+make clean
