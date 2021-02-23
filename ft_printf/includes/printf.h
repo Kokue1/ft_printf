@@ -6,7 +6,7 @@
 /*   By: flemos-d <flemos-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/23 15:47:09 by flemos-d          #+#    #+#             */
-/*   Updated: 2021/02/21 21:26:51 by flemos-d         ###   ########.fr       */
+/*   Updated: 2021/02/23 19:52:13 by flemos-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,5 +99,33 @@ char	*ft_z_cut_func_ud(t_format *struct_, char *trade, char *temp);
 char	*ft_wsp_ud(t_format *struct_, char *trade, char *temp);
 
 char	*ft_itoa_uns(long long arg);
+
+void	ft_treat_hexa(t_format *struct_, va_list args);
+
+void	ft_write_hexa(t_format *struct_, char *trade);
+
+char	*ft_wsp_x(t_format *struct_, char *trade, char *temp);
+
+char	*ft_z_cut_func_x(t_format *struct_, char *trade, char *temp);
+
+char	*ft_pre_z_x(char *trade);
+
+void	ft_verify_p_xx(t_format *struct_, char *trade);
+
+char	*ft_write_p_x(t_format *struct_, char *trade, char *temp);
+
+void	ft_treat_hexa_u(t_format *struct_, va_list args);
+
+void	ft_write_hexa_u(t_format *struct_, char *trade);
+
+char	*ft_z_cut_func_x_u(t_format *struct_, char *trade, char *temp);
+
+char	*ft_pre_z_x_u(char *trade);
+
+void	ft_verify_p_x_u(t_format *struct_, char *trade);
+
+char	*ft_write_p_x_u(t_format *struct_, char *trade, char *temp);
+
+char	*ft_wsp_x_u(t_format *struct_, char *trade, char *temp);
 
 #endif

@@ -21,6 +21,12 @@ SOURCE = 	srcs/ft_printf.c\
 			srcs/Write/write_pointer_width.c\
 			srcs/Write/write_int_rnd.c\
 			srcs/Write/write_integer.c\
+			srcs/Write/write_hexa_x.c\
+			srcs/Write/write_hexa_x_rnd.c\
+			srcs/Write/write_treat_x.c\
+			srcs/Write/write_hexa_X.c\
+			srcs/Write/write_hexa_X_rnd.c\
+			srcs/Write/write_treat_X.c\
 			\
 			srcs/libft_extra/ft_strjoinchr.c\
 
@@ -45,6 +51,12 @@ SOURCES_O = ft_printf.o\
 			write_pointer_width.o\
 			write_int_rnd.o\
 			write_integer.o\
+			write_hexa_x\
+			write_hexa_x_rnd\
+			write_treat_x\
+			write_hexa_X\
+			write_hexa_X_rnd\
+			write_treat_X\
 			\
 			ft_strjoinchr.o\
 

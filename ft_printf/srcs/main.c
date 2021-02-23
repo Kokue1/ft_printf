@@ -1,9 +1,5 @@
 #include "../includes/printf.h"
 
-#define LONG_MIN  (-__LONG_MAX__ -1L)
-#define LONG_MAX  __LONG_MAX__
-
-
 /*int	main()
 {
 	int do_printf;
@@ -1245,13 +1241,6 @@
 	printf("%d\n", do_printf);
 	printf("%d\n", do_ft_printf);
 
-}*/
-
-int	main()
-{
-	int do_printf;
-	int do_ft_printf;
-
 ///////////////////////////////////////////////////
 //     		 U UNSIGNED INTEGERS TESTS
 //////////////////////////////////////////////////
@@ -1612,7 +1601,7 @@ int	main()
 	printf("\n");
 	printf("%d\n", do_printf);
 	printf("%d\n", do_ft_printf);
-}
+}*/
 
 /*int	main()
 {
@@ -2021,7 +2010,7 @@ int	main()
 
 }*/
 
-/*int	main()
+int	main()
 {
 	int do_printf;
 	int do_ft_printf;
@@ -2427,7 +2416,7 @@ int	main()
 	printf("\n");
 	printf("%d\n", do_printf);
 	printf("%d\n", do_ft_printf);
-}*/
+}
 
 /*int	main()
 {
